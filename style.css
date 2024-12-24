@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.upper-nav-con{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #181e4e;
+    padding: 12px 54px;
+    padding-bottom: 8px;
+}
+.phone-btn-nav{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.phone-img{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.phone-img p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    color: white;
+}
+.phone-img img{
+    height: 18px;
+}
+.nav-btn{
+    padding: 9px 24px;
+    font-size: 14px;
+    line-height: 20px;
+    background: transparent;
+    border: 1px solid #ffc145;
+    color: #ffc145;
+    font-family: DM Sans;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.nav-list{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 20px 54px;
+}
+.sec3{
+    background-color: #181e4e;
+}
+.hero-sec{
+    display: flex;
+    justify-content: space-around;
+    padding: 54px 6px;
+    padding-bottom: 0px;
+}
+.hero-text{
+    max-width: 605px;
+    padding-left: 10px;
+}
+.hero-text h1{
+    font-size: 72px;
+    font-family: Lato;
+    color: white;
+    padding-top: 60px;
+    padding-bottom: 0;
+
+}
+.hero-text p{
+    font-size: 20px;
+    font-family: DM Sans;
+    padding-top: 20px;
+    color: white;
+}
+.input-hero{
+    border: 1px solid #8c8af7;
+    outline-offset: 2px;
+    background-color: transparent;
+    padding-left: 5.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 20px;
+    padding-top: 21px
+}
+.web-an-btn{
+    padding: 15px 40px;
+    line-height: 26px;
+    min-width: 234px;
+    background-color: #ffc145;
+    color: #000;
+    font-weight: 700;
+    font-size: 16px;
+    border: 1px solid #ffc145;
+}
+
+.inp-btn{
+    display: flex;
+    gap: 0px;
+    padding-top: 40px;
+}
