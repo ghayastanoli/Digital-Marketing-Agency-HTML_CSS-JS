@@ -3,15 +3,31 @@
     margin: 0;
     box-sizing: border-box;
 }
+.header{
+    background-color: #181e4e;
+}
 
 .upper-nav-con{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #181e4e;
+    /* background-color: #181e4e; */
     padding: 12px 54px;
     padding-bottom: 8px;
+    margin: 0 auto;
+    max-width: 1350px;
+    width: 100%;
 }
+
+/* .sticky {
+    position: fixed; 
+    top: 0;          
+    width: 100%;     
+    z-index: 1000;   
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+} */
+
+
 .phone-btn-nav{
     display: flex;
     align-items: center;
@@ -41,6 +57,11 @@
     font-weight: 700;
     text-transform: uppercase;
 }
+.middle-nav-con{
+    margin: 0 auto;
+    max-width: 1350px;
+    width: 100%;
+}
 .nav-list{
     display: flex;
     list-style: none;
@@ -59,6 +80,9 @@
     justify-content: space-around;
     padding: 54px 6px;
     padding-bottom: 0px;
+    margin: 0 auto;
+    max-width: 1350px;
+    width: 100%;
 }
 .hero-text{
     max-width: 605px;
@@ -102,4 +126,633 @@
     display: flex;
     gap: 0px;
     padding-top: 40px;
+}
+.logo-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 48px;
+    padding: 30px;
+    margin: 0 auto;
+    max-width: 1350px;
+    width: 100%;
+}
+.logo-img{
+    display: flex;
+    aspect-ratio: 35/1;
+    justify-content: space-between;
+    padding-right: 108px;
+}
+.logo-img img{
+    filter: grayscale(100%);
+}
+.logo-img img:hover{
+    filter: grayscale(0%);
+}
+.logo-text p{
+    font-size: 14px;
+    font-weight: 700;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%); /* Start offscreen to the right */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0); /* End at the original position */
+        opacity: 1;
+    }
+}
+
+.logo {
+    opacity: 0; /* Initially hidden */
+    transform: translateX(100%); /* Positioned offscreen to the right */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.logo.animate {
+    animation: slideInFromRight 0.7s ease forwards; /* Smooth sliding in from the right */
+}
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%); /* Start offscreen to the left */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0); /* End at the original position */
+        opacity: 1;
+    }
+}
+
+.logo-text p {
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-100%); /* Positioned offscreen to the left */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.logo-text p.animate {
+    animation: slideInFromLeft 0.7s ease forwards; /* Smooth sliding in from the left */
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%); /* Start offscreen below */
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0); /* End at the original position */
+        opacity: 1;
+    }
+}
+
+.inp-btn {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(100%); /* Positioned offscreen below */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.inp-btn.animate {
+    animation: slideInFromBottom 0.7s ease forwards; /* Smooth sliding in from bottom */
+}
+
+.sec-5-text{
+    text-transform: capitalize;
+    font-family: Lato;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 853px;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    padding: 60px 0px;
+}
+.sec-5-p1{
+    font-size: 14px;
+    color: #0066ba;
+    font-weight: 700;
+    letter-spacing: .1em;
+    font-family: DM Sans;
+}
+.sec-5-p2{
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    padding-top: 30px;
+}
+
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 700px; /* Adjust the height as needed */
+    overflow: hidden;
+    padding: 50px;
+    margin: 0 auto;
+    max-width: 1350px;
+    width: 100%;
+}
+
+.part {
+    flex: 1; /* Ensures all parts take equal width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Ensures the content aligns at the bottom */
+    transition: flex 1.5s ease; /* Smooth transition for width changes */
+    background-image: 
+        linear-gradient(rgb(0, 0, 0) 15%, rgba(0, 0, 0, 0) 100%), 
+        url(images/card-imgs/industry-1.webp);
+    background-size: cover; /* Ensures the background image covers the element */
+    background-position: center; /* Ensures the background image is centered */
+    filter: grayscale(100%);
+    border: 1px solid #ccc;
+    position: relative;
+    cursor: pointer;
+    text-align: left; /* Center text horizontally */
+    min-width: 0; /* Prevents the element from expanding beyond its allocated space */
+}
+
+.part h2 {
+    margin: 0;
+    font-size: 28px;
+    z-index: 2; /* Ensure the heading is always visible */
+    pointer-events: none;
+    font-family: DM Sans;
+    line-height: 2;
+    color: white;
+    word-wrap: break-word; /* Makes sure long headings break into multiple lines */
+    white-space: normal; /* Allows text to wrap */
+    padding: 0px 20px; /* Adds padding to the heading */
+    padding-top: 80px;
+    text-align: left;
+}
+
+.part p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.2s ease; /* Smooth fade-in effect for text */
+    pointer-events: none;
+    font-family: DM Sans, sans-serif;
+    margin-top: .75rem;
+    font-weight: 500;
+    padding: 0 15px;
+    line-height: 2;
+    text-align: left;
+}
+
+.part:hover {
+    flex: 1.8; /* Increase width on hover */
+    color: #fff; /* Change text color */
+    filter: grayscale(0%);
+}
+
+.part:hover p {
+    opacity: 1; /* Show text on hover */
+}
+
+.c-flex {
+    display: flex;
+    padding-top: 30px;
+}
+
+.c2-flex {
+    display: flex;
+    align-items: center;
+}
+
+.c2-p1 {
+    font-family: Rajdhani !important;
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    color: white; /* Ensure the text color is white for better visibility */
+    transition: opacity 0.3 ease-in-out !important;
+}
+
+.c2-p2 {
+    color: rgb(238, 197, 15);
+    transition: opacity 0.3 ease-in-out !important;
+    line-height: 1 !important;
+    font-weight: 600 !important;
+    font-family: DM Sans !important;
+
+}
+
+.part2 {
+    flex: 1; /* Ensures all parts take equal width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Ensures the content aligns at the bottom */
+    transition: flex 1.5s ease; /* Smooth transition for width changes */
+    background-image: 
+        linear-gradient(rgb(0, 0, 0) 15%, rgba(0, 0, 0, 0) 100%), 
+        url(images/card-imgs/Industry-02.webp);
+    background-size: cover; /* Ensures the background image covers the element */
+    background-position: center; /* Ensures the background image is centered */
+    filter: grayscale(100%);
+    border: 1px solid #ccc;
+    position: relative;
+    cursor: pointer;
+    text-align: left; 
+    min-width: 0; 
+}
+
+.part2 h2 {
+    margin: 0;
+    font-size: 28px;
+    z-index: 2; /* Ensure the heading is always visible */
+    pointer-events: none;
+    font-family: DM Sans;
+    line-height: 2;
+    color: white;
+    word-wrap: break-word; /* Makes sure long headings break into multiple lines */
+    white-space: normal; /* Allows text to wrap */
+    padding: 0px 20px; /* Adds padding to the heading */
+    padding-top: 80px;
+    text-align: left;
+}
+
+.part2 p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.2s ease; /* Smooth fade-in effect for text */
+    pointer-events: none;
+    font-family: DM Sans, sans-serif;
+    margin-top: .75rem;
+    font-weight: 500;
+    padding: 0 15px;
+    line-height: 2;
+    text-align: left;
+}
+
+.part2:hover {
+    flex: 1.8; /* Increase width on hover */
+    color: #fff; /* Change text color */
+    filter: grayscale(0%);
+}
+
+.part2:hover p {
+    opacity: 1; /* Show text on hover */
+}
+.part3 {
+    flex: 1; /* Ensures all parts take equal width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Ensures the content aligns at the bottom */
+    transition: flex 1.5s ease; /* Smooth transition for width changes */
+    background-image: 
+        linear-gradient(rgb(0, 0, 0) 15%, rgba(0, 0, 0, 0) 100%), 
+        url(images/card-imgs/industry-3.webp);
+    background-size: cover; /* Ensures the background image covers the element */
+    background-position: center; /* Ensures the background image is centered */
+    filter: grayscale(100%);
+    border: 1px solid #ccc;
+    position: relative;
+    cursor: pointer;
+    text-align: left; 
+    min-width: 0; 
+}
+
+.part3 h2 {
+    margin: 0;
+    font-size: 28px;
+    z-index: 2; /* Ensure the heading is always visible */
+    pointer-events: none;
+    font-family: DM Sans;
+    line-height: 2;
+    color: white;
+    word-wrap: break-word; /* Makes sure long headings break into multiple lines */
+    white-space: normal; /* Allows text to wrap */
+    padding: 0px 20px; /* Adds padding to the heading */
+    padding-top: 80px;
+    text-align: left;
+}
+
+.part3 p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.2s ease; /* Smooth fade-in effect for text */
+    pointer-events: none;
+    font-family: DM Sans, sans-serif;
+    margin-top: .75rem;
+    font-weight: 500;
+    padding: 0 15px;
+    line-height: 2;
+    text-align: left;
+}
+
+.part3:hover {
+    flex: 1.8; /* Increase width on hover */
+    color: #fff; /* Change text color */
+    filter: grayscale(0%);
+}
+
+.part3:hover p {
+    opacity: 1; /* Show text on hover */
+}
+.part4 {
+    flex: 1; /* Ensures all parts take equal width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Ensures the content aligns at the bottom */
+    transition: flex 1.5s ease; /* Smooth transition for width changes */
+    background-image: 
+        linear-gradient(rgb(0, 0, 0) 15%, rgba(0, 0, 0, 0) 100%), 
+        url(images/card-imgs/industry-4.webp);
+    background-size: cover; /* Ensures the background image covers the element */
+    background-position: center; /* Ensures the background image is centered */
+    filter: grayscale(100%);
+    border: 1px solid #ccc;
+    position: relative;
+    cursor: pointer;
+    text-align: left; 
+    min-width: 0; 
+}
+.part4 h2 {
+    margin: 0;
+    font-size: 28px;
+    z-index: 2; /* Ensure the heading is always visible */
+    pointer-events: none;
+    font-family: DM Sans;
+    line-height: 2;
+    color: white;
+    word-wrap: break-word; /* Makes sure long headings break into multiple lines */
+    white-space: normal; /* Allows text to wrap */
+    padding: 0px 20px; /* Adds padding to the heading */
+    padding-top: 80px;
+    text-align: left;
+}
+
+.part4 p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.2s ease; /* Smooth fade-in effect for text */
+    pointer-events: none;
+    font-family: DM Sans, sans-serif;
+    margin-top: .75rem;
+    font-weight: 500;
+    padding: 0 15px;
+    line-height: 2;
+    text-align: left;
+}
+
+.part4:hover {
+    flex: 1.8; /* Increase width on hover */
+    color: #fff; /* Change text color */
+    filter: grayscale(0%);
+}
+
+.part4:hover p {
+    opacity: 1; /* Show text on hover */
+}
+.part5 {
+    flex: 1; /* Ensures all parts take equal width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Ensures the content aligns at the bottom */
+    transition: flex 1.5s ease; /* Smooth transition for width changes */
+    background-image: 
+        linear-gradient(rgb(0, 0, 0) 15%, rgba(0, 0, 0, 0) 100%), 
+        url(images/card-imgs/industry-5.webp);
+    background-size: cover; /* Ensures the background image covers the element */
+    background-position: center; /* Ensures the background image is centered */
+    filter: grayscale(100%);
+    border: 1px solid #ccc;
+    position: relative;
+    cursor: pointer;
+    text-align: left; 
+    min-width: 0; 
+}
+.part5 h2 {
+    margin: 0;
+    font-size: 28px;
+    z-index: 2; /* Ensure the heading is always visible */
+    pointer-events: none;
+    font-family: DM Sans;
+    line-height: 2;
+    color: white;
+    word-wrap: break-word; /* Makes sure long headings break into multiple lines */
+    white-space: normal; /* Allows text to wrap */
+    padding: 0px 20px; /* Adds padding to the heading */
+    padding-top: 80px;
+    text-align: left;
+}
+
+.part5 p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.2s ease; /* Smooth fade-in effect for text */
+    pointer-events: none;
+    font-family: DM Sans, sans-serif;
+    margin-top: .75rem;
+    font-weight: 500;
+    padding: 0 15px;
+    line-height: 2;
+    text-align: left;
+}
+
+.part5:hover {
+    flex: 1.8; /* Increase width on hover */
+    color: #fff; /* Change text color */
+    filter: grayscale(0%);
+}
+
+.part5:hover p {
+    opacity: 1; /* Show text on hover */
+}
+
+.sec-6-list{
+    display: flex;
+    justify-content: start;
+    gap: 80px;
+    padding-left: 15px;
+}
+.sec-6-container{
+    margin: 0 auto;
+    max-width: 1350px;
+    width: 100%;
+}
+.sec-6-content{
+    display: flex;
+    background-color: #181e4e;
+    margin-right: 52px;
+    padding: 20px 24px;
+    gap: 27px;
+    padding-bottom: 94px;
+}
+.sec-6-content2{
+    display: flex;
+}
+.con-left p{
+    transform: rotate(270deg);
+    text-wrap: nowrap;
+    position: relative;
+    top: 78px;
+    left: 9px;
+    font-size: 14px;
+    font-family: DM Sans;
+    font-weight: 700;
+    color: rgb(30 64 175 );
+
+
+}
+.con-left{
+    width: 4%;
+}
+.sec-6-left-text{
+    max-width: 50%;
+    padding: 65px;
+}
+.sec-6-left-text h2{
+    font-size: 3.75rem;
+    line-height: 83px;
+    font-family: Lato;
+    color:white;
+    font-weight: 900;
+}
+.sec-6-left-text p{
+    font-size: 16px;
+    font-family: DM Sans;
+    color: white;
+    padding-top: 30px;
+    line-height: 1.5;
+}
+.sec-6-btn button{
+    background-color: #ffc145;
+    padding: 15px 40px;
+    line-height: 26px;
+    font-family: DM Sans;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    margin-top: 63px;
+}
+.sec-6-right-text p{
+    font-size: 16px;
+    font-family: DM Sans;
+    color: white;
+    padding-top: 30px;
+    line-height: 1.5;
+    padding-bottom: 20px;
+
+}
+.p-mid-text{
+    font-size: 18px;
+    font-family: DM Sans;
+    color: white;
+    padding-top: 30px;
+    line-height: 1.5;
+    padding-bottom: 20px;
+}
+.sec6-list1{
+    color:white;
+    font-family: DM Sans;
+    font-family: 14px;
+    line-height: 3;
+}
+.sec6-list-item::marker{
+    color: #fac115;
+}
+
+.heading-btns{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.heading-btns p{
+    font-size: 18px;
+    font-family: DM Sans;
+    color: rgb(158, 157, 157);
+    cursor: pointer;
+    font-weight: 500;
+}
+.sec-7-container{
+    padding-top: 85px;
+}
+
+.heading-btns p:hover{
+    color: #181e4e;
+}
+
+.sec-7-content{
+    display: flex;
+    padding: 54px;
+    gap: 104px;
+    margin: 0 auto;
+    max-width: 1350px;
+    width: 100%;
+}
+.sec-7-num-text{
+    display: flex;
+    gap: 180px;
+}
+.sec-7-num-desc{
+    display: flex;
+    gap: 44px;
+    margin-top: 15px;
+    margin-bottom: 2rem;
+}
+.sec-7-p1{
+    font-family: DM Sans;
+    color: rgb(24 30 78);
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: .5rem;
+}
+.sec-7-upper-text h3{
+    font-family: Lato;
+    color: #1b1d28;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 52px;
+    margin-bottom: 1rem;
+}
+.sec-7-p2{
+    line-height: 1.25;
+    font-size: .875rem;
+    font-family: DM Sans;
+    color: rgb(102 102 102);
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+.num1, .num2{
+    font-size: 30px;
+    font-family: Rajdhani;
+    font-weight: 700;
+}
+.desc1, .desc2{
+    font-family: DM Sans;
+    color: rgb(107 114 128);
+    font-weight: 400;
+    line-height: 1.25;
+    font-size: .875rem;
+}
+.name p{
+    font-family: Lato;
+    color: rgb(24 30 78);
+    line-height: 1.375;
+    font-weight: 900;
+    font-size: .875rem;
+    margin-bottom: 1rem;
+
+}
+.lst-desc{
+    font-family: DM Sans;
+    color: rgb(107 114 128);
+    font-weight: 400;
+    margin-bottom: 4rem;
+    font-size: 0.875rem;
 }
