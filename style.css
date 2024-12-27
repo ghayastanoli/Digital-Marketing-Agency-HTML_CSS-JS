@@ -138,7 +138,7 @@
 .logo-div{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     gap: 48px;
     padding: 30px;
     margin: 0 auto;
@@ -150,6 +150,8 @@
     aspect-ratio: 35/1;
     justify-content: space-between;
     padding-right: 108px;
+    gap: 10px;
+    padding: 0px 40px;
 }
 .logo-img img{
     filter: grayscale(100%);
@@ -199,6 +201,7 @@
     opacity: 0; /* Initially hidden */
     transform: translateX(-100%); /* Positioned offscreen to the left */
     transition: opacity 0.5s ease, transform 0.5s ease;
+    text-transform: uppercase;
 }
 
 .logo-text p.animate {
@@ -236,7 +239,8 @@
     margin: 0 auto;
     align-items: center;
     text-align: center;
-    padding: 60px 0px;
+    padding: 45px 0px;
+    padding-bottom: 0px;
 }
 .sec-5-p1{
     font-size: 14px;
@@ -290,7 +294,7 @@
     z-index: 2; /* Ensure the heading is always visible */
     pointer-events: none;
     font-family: DM Sans;
-    line-height: 2;
+    line-height: 1.5;
     color: white;
     word-wrap: break-word; /* Makes sure long headings break into multiple lines */
     white-space: normal; /* Allows text to wrap */
@@ -303,7 +307,7 @@
     margin: 0;
     font-size: 14px;
     opacity: 0; /* Initially hidden */
-    transition: opacity 0.2s ease; /* Smooth fade-in effect for text */
+    
     pointer-events: none;
     font-family: DM Sans, sans-serif;
     margin-top: .75rem;
@@ -314,13 +318,15 @@
 }
 
 .part:hover {
-    flex: 1.8; /* Increase width on hover */
-    color: #fff; /* Change text color */
+    flex: 1.8; 
+    color: #fff; 
     filter: grayscale(0%);
 }
 
 .part:hover p {
     opacity: 1; /* Show text on hover */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect for text */
+    transition-delay: 1s;
 }
 
 .c-flex {
@@ -337,31 +343,40 @@
     font-family: Rajdhani !important;
     font-size: 2rem !important;
     font-weight: 700 !important;
-    color: white; /* Ensure the text color is white for better visibility */
-    transition: opacity 0.3 ease-in-out !important;
+    color: white; 
+    
 }
 
 .c2-p2 {
     color: rgb(238, 197, 15);
-    transition: opacity 0.3 ease-in-out !important;
     line-height: 1 !important;
     font-weight: 600 !important;
     font-family: DM Sans !important;
 
 }
+.part:hover .c2-p1 {
+    opacity: 1; /* Show text on hover */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect for text */
+    transition-delay: 1.5s;
+}
+.part:hover .c2-p2 {
+    opacity: 1; /* Show text on hover */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect for text */
+    transition-delay: 1.5s;
+}
 
 .part2 {
-    flex: 1; /* Ensures all parts take equal width */
+    flex: 1; 
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Ensures the content aligns at the bottom */
-    transition: flex 1.5s ease; /* Smooth transition for width changes */
+    justify-content: flex-start; 
+    transition: flex 1.5s ease; 
     background-image: 
         linear-gradient(rgb(0, 0, 0) 15%, rgba(0, 0, 0, 0) 100%), 
         url(images/card-imgs/Industry-02.webp);
-    background-size: cover; /* Ensures the background image covers the element */
-    background-position: center; /* Ensures the background image is centered */
+    background-size: cover; 
+    background-position: center; 
     filter: grayscale(100%);
     border: 1px solid #ccc;
     position: relative;
@@ -369,18 +384,33 @@
     text-align: left; 
     min-width: 0; 
 }
+.part2:hover p {
+    opacity: 1; /* Show text on hover */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect for text */
+    transition-delay: 1s;
+}
+.part2:hover .c2-p1 {
+    opacity: 1; /* Show text on hover */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect for text */
+    transition-delay: 1.5s;
+}
+.part2:hover .c2-p2 {
+    opacity: 1; /* Show text on hover */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect for text */
+    transition-delay: 1.5s;
+}
 
 .part2 h2 {
     margin: 0;
     font-size: 28px;
-    z-index: 2; /* Ensure the heading is always visible */
+    z-index: 2; 
     pointer-events: none;
     font-family: DM Sans;
     line-height: 2;
     color: white;
-    word-wrap: break-word; /* Makes sure long headings break into multiple lines */
-    white-space: normal; /* Allows text to wrap */
-    padding: 0px 20px; /* Adds padding to the heading */
+    word-wrap: break-word; 
+    white-space: normal; 
+    padding: 0px 20px; 
     padding-top: 80px;
     text-align: left;
 }
@@ -426,6 +456,21 @@
     cursor: pointer;
     text-align: left; 
     min-width: 0; 
+}
+.part3:hover p {
+    opacity: 1; /* Show text on hover */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect for text */
+    transition-delay: 1.3s;
+}
+.part3:hover .c2-p1 {
+    opacity: 1; /* Show text on hover */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect for text */
+    transition-delay: 1.7s;
+}
+.part3:hover .c2-p2 {
+    opacity: 1; /* Show text on hover */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect for text */
+    transition-delay: 1.7s;
 }
 
 .part3 h2 {
@@ -485,6 +530,21 @@
     text-align: left; 
     min-width: 0; 
 }
+.part4:hover p {
+    opacity: 1; /* Show text on hover */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect for text */
+    transition-delay: 1.3s;
+}
+.part4:hover .c2-p1 {
+    opacity: 1; /* Show text on hover */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect for text */
+    transition-delay: 1.7s;
+}
+.part4:hover .c2-p2 {
+    opacity: 1; /* Show text on hover */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect for text */
+    transition-delay: 1.7s;
+}
 .part4 h2 {
     margin: 0;
     font-size: 28px;
@@ -542,6 +602,21 @@
     text-align: left; 
     min-width: 0; 
 }
+.part5:hover p {
+    opacity: 1; /* Show text on hover */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect for text */
+    transition-delay: 1.3s;
+}
+.part5:hover .c2-p1 {
+    opacity: 1; /* Show text on hover */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect for text */
+    transition-delay: 1.7s;
+}
+.part5:hover .c2-p2 {
+    opacity: 1; /* Show text on hover */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect for text */
+    transition-delay: 1.7s;
+}
 .part5 h2 {
     margin: 0;
     font-size: 28px;
@@ -597,8 +672,15 @@
     background-color: #181e4e;
     margin-right: 52px;
     padding: 20px 24px;
-    gap: 27px;
-    padding-bottom: 94px;
+    gap: 125px;
+}
+.sec-6-left-p1{
+    font-size: 60px;
+    font-family: Rajdhani;
+    color: white;
+    padding-top: 250px;
+    line-height: 1.5;
+    max-width: 450px;
 }
 .sec-6-content2{
     display: flex;
@@ -616,12 +698,16 @@
 
 
 }
+.sec-6-img img{
+    padding-bottom: 25px;
+}
 .con-left{
     width: 4%;
 }
 .sec-6-left-text{
-    max-width: 50%;
-    padding: 65px;
+    max-width: 40%;
+    padding-left: 10px;
+    padding-top: 30px;
 }
 .sec-6-left-text h2{
     font-size: 3.75rem;
@@ -636,6 +722,7 @@
     color: white;
     padding-top: 30px;
     line-height: 1.5;
+    max-width: 450px;
 }
 .sec-6-btn button{
     background-color: #ffc145;
@@ -645,7 +732,7 @@
     font-weight: 700;
     font-size: 16px;
     border: none;
-    margin-top: 63px;
+    margin-top: 28px;
     cursor: pointer;
 }
 .sec-6-btn button:hover{
@@ -653,12 +740,13 @@
     transition: all 0.3s;
 }
 .sec-6-right-text p{
-    font-size: 16px;
+    font-size: 14px;
     font-family: DM Sans;
     color: white;
     padding-top: 30px;
     line-height: 1.5;
     padding-bottom: 20px;
+    max-width: 450px
 
 }
 .p-mid-text{
@@ -682,7 +770,7 @@
 .heading-btns{
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 25px;
 }
 .heading-btns p{
     font-size: 18px;
@@ -775,7 +863,7 @@
     cursor: pointer;
     color: rgb(102, 102, 102);
     font-family: DM Sans;
-    font-weight: 700;
+    font-weight: 500;
     padding: 0.5rem;
     transition: color 0.3s ease;
 }
@@ -805,7 +893,7 @@
     align-items: center;
     text-align: center;
     padding-bottom: 60px;
-    padding-top: 50px;
+    padding-top: 40px;
 }
 .sec-8-p1{
     font-size: 14px;
@@ -876,6 +964,7 @@
 }
 .text p{
     text-wrap: nowrap;
+    margin-top: -10px;
 }
 .sec9{
     background-color: #f5f5f5;
@@ -900,7 +989,7 @@
 }
 .sec-9-p1{
     font-size: 14px;
-    color: #0066ba;
+    color: #1d4ed8;
     font-weight: 700;
     letter-spacing: .1em;
     font-family: DM Sans;
@@ -930,7 +1019,7 @@
     background-repeat: no-repeat;
     background-position: 184px;
     background-position-y: 0px;
-    min-width: 370px;
+    min-width: 385px;
 }
 .card:hover{
     background-color: #181e4e;
@@ -1003,7 +1092,7 @@
 }
 .sec-10-p1{
     font-size: 14px;
-    color: #0066ba;
+    color: #1d4ed8;
     font-weight: 700;
     letter-spacing: .1em;
     font-family: DM Sans;
@@ -1092,7 +1181,7 @@
 .footer-flex{
     display: flex;
     justify-content: center;
-    gap: 65px;
+    gap: 90px;
 }
 .footer-list{
     list-style: none;
