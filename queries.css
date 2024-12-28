@@ -1,0 +1,129 @@
+/* Media Queries for Responsive Design */
+
+
+
+
+
+@media (max-width: 1134px){
+
+    .hero-text h1{
+        font-size: 64px;
+    }
+    .hero-text p{
+        font-size: 18px;
+    }
+    .hero-img img{
+        height: 400px;
+    }
+    .logo-text p{
+        text-wrap: nowrap;
+        font-size: 12px;
+    }
+}
+@media (max-width: 1090px){
+    .card-temp{
+        flex-wrap: wrap;
+
+    }
+    .nav-list{
+        font-size: 13px;
+    }
+}
+@media (max-width: 1040px){
+    .sec-6-content{
+        flex-direction: column;
+        align-items: center;
+    }
+    .con-left p{
+        display: none;
+    }
+    .sec-6-content2{
+        justify-content: center;
+        margin-left: 50px;
+    }
+    .con-left{
+        width: 0;
+        display: none;
+    }
+    .con-left p{
+        display: none;
+    }
+    .sec-6-left-text{
+        max-width: 100%;
+    }
+}
+@media (max-width: 1070px){
+    .hero-sec {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 20px;
+      }
+      #dynamic-image{
+        height: 500px;
+
+      }
+      .inp-btn {
+        flex-direction: column;
+        gap: 5px;
+      }
+    
+      .hero-img {
+        display: none;
+      }
+    
+      .inp-btn {
+        justify-content: center;
+      }
+      .sec12-left{
+        flex-direction: column;
+        padding-bottom: 20px;
+    
+    }
+    .sec12-flex{
+        align-items: center;
+        flex-direction: column;
+    }
+    .footer-flex{
+        padding: 0 35px;
+    }
+    .logo-div{
+        flex-direction: column;
+    }
+    .logo-img{
+        gap: 30px;
+    }
+    .logo {
+        flex: 0 1 calc(33.33% - 70px); /* Three items per row */
+        text-align: center;
+    }
+}
+@media (max-width:926px){
+    .sec-7-content{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .container{
+        flex-direction: column;
+        height: 1300px;
+    }
+    .part{
+        height: 220px;
+    }
+    .part2{
+        height: 220px;
+    }
+    .part3{
+        height: 220px;
+    }
+    .part4{
+        height: 220px;
+    }
+    .part5{
+        height: 220px;
+    }
+}
+
+
+
+

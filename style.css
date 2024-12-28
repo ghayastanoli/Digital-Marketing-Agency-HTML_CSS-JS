@@ -139,7 +139,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    gap: 48px;
+    gap: 30px;
     padding: 30px;
     margin: 0 auto;
     max-width: 1350px;
@@ -147,14 +147,15 @@
 }
 .logo-img{
     display: flex;
-    aspect-ratio: 35/1;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding-right: 108px;
-    gap: 10px;
+    gap: 70px;
     padding: 0px 40px;
 }
 .logo-img img{
     filter: grayscale(100%);
+    height: 20px;
 }
 .logo-img img:hover{
     filter: grayscale(0%);
@@ -961,6 +962,7 @@
 .sec-8-num-text{
     display: flex;
     justify-content: space-around;
+    padding-right: 30px;
 }
 .text p{
     text-wrap: nowrap;
@@ -1019,7 +1021,7 @@
     background-repeat: no-repeat;
     background-position: 184px;
     background-position-y: 0px;
-    min-width: 385px;
+    min-width: 350px;
 }
 .card:hover{
     background-color: #181e4e;
@@ -1173,7 +1175,7 @@
 .sec10-img img{
     padding-top: 4px;
     object-fit: cover;
-    width: 105%;
+    width: 100%;
     height: 100%;
     margin-left: 1px;
 }
@@ -1340,3 +1342,80 @@
     font-size: .875rem;
     cursor: pointer;
 }
+
+
+/* Default hidden overlay */
+.middle-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    display: none; /* Hidden by default */
+    flex-direction: column; /* Column layout */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Above other elements */
+}
+
+/* Show overlay when active */
+.middle-nav-overlay.active {
+    display: flex;
+}
+
+/* Navigation items */
+.middle-nav-overlay .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Display items in columns */
+    gap: 20px;
+    text-align: center;
+}
+
+.middle-nav-overlay .nav-list .nav-item {
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.middle-nav-overlay .nav-list .nav-item a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.middle-nav-overlay .nav-list .nav-item a:hover {
+    color: #ffc145; /* Highlight color on hover */
+}
+
+/* Hamburger menu styling */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1100; /* Above overlay */
+}
+
+.hamburger-menu span {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Show hamburger menu on smaller screens */
+@media screen and (max-width: 1070px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .middle-nav-con {
+        display: none; /* Hide the default navigation */
+    }
+}
+

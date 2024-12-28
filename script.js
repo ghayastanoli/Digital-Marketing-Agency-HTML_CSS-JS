@@ -268,3 +268,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+
+// Select elements
+const hamburgerMenu = document.getElementById('hamburger-menu');
+const middleNavOverlay = document.getElementById('middle-nav-overlay');
+
+// Toggle overlay visibility
+hamburgerMenu.addEventListener('click', () => {
+    middleNavOverlay.classList.toggle('active'); // Show or hide overlay
+    document.body.style.overflow = middleNavOverlay.classList.contains('active') ? 'hidden' : ''; // Prevent scrolling
+});
+
