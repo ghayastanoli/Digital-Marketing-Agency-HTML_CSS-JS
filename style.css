@@ -656,6 +656,53 @@
 .part5:hover p {
     opacity: 1; /* Show text on hover */
 }
+/* Initially hidden */
+.sec-6-container {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Animation class */
+.sec-6-container.animate {
+    animation: slideInFromBottom 1s ease forwards; /* Trigger slide-in animation */
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.sec5 {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Animation class */
+.sec5.animate {
+    animation: slideInFromBottom 1s ease forwards; /* Trigger slide-in animation */
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
 
 .sec-6-list{
     display: flex;
@@ -1440,3 +1487,48 @@
     }
 }
 
+
+
+
+/*Animations*/
+.sec7 {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Animation class */
+.sec7.animate {
+    animation: slideInFromBottom 1s ease forwards; /* Trigger slide-in animation */
+}
+
+.sec-10-content {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Animation class */
+.sec-10-content.animate {
+    animation: slideInFromBottom 1s ease forwards; /* Trigger slide-in animation */
+}
+
+
+/* Initial states for animations */
+#card-left {
+    opacity: 0;
+    transform: translateX(-100%); /* Start offscreen to the left */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+#card-right {
+    opacity: 0;
+    transform: translateX(100%); /* Start offscreen to the right */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Animated state */
+#card-left.animate, #card-right.animate {
+    opacity: 1;
+    transform: translateX(0); /* Slide to its original position */
+}

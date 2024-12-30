@@ -60,6 +60,94 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', animateElements);
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const sec6Container = document.querySelector('.sec-6-container');
+
+    const animateSection = () => {
+        const triggerPoint = window.innerHeight * 1.9; // Trigger slightly before the element is fully in view
+        const sec6Top = sec6Container.getBoundingClientRect().top;
+
+        if (sec6Top < triggerPoint) {
+            sec6Container.classList.add('animate'); // Add the animation class
+            window.removeEventListener('scroll', animateSection); // Remove event listener after animation is triggered
+        }
+    };
+
+    window.addEventListener('scroll', animateSection);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const sec6Container = document.querySelector('.sec5');
+
+    const animateSection = () => {
+        const triggerPoint = window.innerHeight * 1.9; // Trigger slightly before the element is fully in view
+        const sec6Top = sec6Container.getBoundingClientRect().top;
+
+        if (sec6Top < triggerPoint) {
+            sec6Container.classList.add('animate'); // Add the animation class
+            window.removeEventListener('scroll', animateSection); // Remove event listener after animation is triggered
+        }
+    };
+
+    window.addEventListener('scroll', animateSection);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const sec6Container = document.querySelector('.sec7');
+
+    const animateSection = () => {
+        const triggerPoint = window.innerHeight * 1.9; // Trigger slightly before the element is fully in view
+        const sec6Top = sec6Container.getBoundingClientRect().top;
+
+        if (sec6Top < triggerPoint) {
+            sec6Container.classList.add('animate'); // Add the animation class
+            window.removeEventListener('scroll', animateSection); // Remove event listener after animation is triggered
+        }
+    };
+
+    window.addEventListener('scroll', animateSection);
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const sec6Container = document.querySelector('.sec-10-content');
+
+    const animateSection = () => {
+        const triggerPoint = window.innerHeight * 1.9; // Trigger slightly before the element is fully in view
+        const sec6Top = sec6Container.getBoundingClientRect().top;
+
+        if (sec6Top < triggerPoint) {
+            sec6Container.classList.add('animate'); // Add the animation class
+            window.removeEventListener('scroll', animateSection); // Remove event listener after animation is triggered
+        }
+    };
+
+    window.addEventListener('scroll', animateSection);
+});
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const firstCard = document.getElementById('card-left'); // First card
+    const thirdCard = document.getElementById('card-right'); // Third card
+
+    const animateCards = () => {
+        const triggerPoint = window.innerHeight * 0.8; // Adjust trigger point if needed
+
+        // Animate first card
+        if (firstCard.getBoundingClientRect().top < triggerPoint) {
+            firstCard.classList.add('animate');
+        }
+
+        // Animate third card
+        if (thirdCard.getBoundingClientRect().top < triggerPoint) {
+            thirdCard.classList.add('animate');
+        }
+    };
+
+    window.addEventListener('scroll', animateCards);
+});
+
 
 
 
