@@ -1081,7 +1081,6 @@
 }
 .card{
     display: flex;
-    /* box-shadow: 0 4px 4px 0 #00000008; */
     border: 1px solid rgb(228, 223, 223);
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
@@ -1493,6 +1492,7 @@
 }
 .middle-nav-con{
     background-color: white;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 
